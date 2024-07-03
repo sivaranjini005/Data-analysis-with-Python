@@ -43,7 +43,58 @@
           * From the line chart we find that there is a clear upward trend in the number of daily page views over the given period, indicating that the forum's popularity has grown significantly.There appear to be recurring patterns in the data, indicating possible seasonal variations in forum activity. For example, there are noticeable peaks around certain times each year.
           * From the bar chart we get the monthly average views, making us understand that last quarters in all years have more average views than other quarters. So there is a seasonality based views on this page forum.
           * From the box plot we observe that there is a significant growth in the page views over the years and we find that highest peak and lowest views as outliers, from this both year wise and month wise box plots we can say that there is a seasonality in page views.
-      
+
+### Mean, Median, Standard Deviation Using Numpy
+```
+import numpy as np
+
+def calculate(list_):
+    if len(list_) != 9:
+        raise ValueError('List must contain nine numbers')
+    array_ = np.array(list_).reshape(3,3)
+
+    mean_ax0 = np.mean(array_, axis = 0)
+    mean_ax1 = np.mean(array_, axis = 1)
+    mean_all = np.mean(array_)
+
+    var_a0 = np.var(array_, axis = 0)
+    var_a1 = np.var(array_, axis = 1)
+    var_al = np.var(array_)
+
+    var_ax0 = np.around(var_a0, decimals= 3)
+    var_ax1 = np.around(var_a1, decimals= 3)
+    var_all = np.around(var_al, decimals= 3)
+
+
+    std_a0 = np.std(array_, axis = 0)
+    std_a1 = np.std(array_, axis = 1)
+    std_al = np.std(array_)
+
+    std_ax0 = np.around(std_a0, decimals= 3)
+    std_ax1 = np.around(std_a1,decimals= 3)
+    std_all = np.around(std_al, decimals= 3)
+
+    max_ax0 = np.max(array_, axis = 0)
+    max_ax1 = np.max(array_, axis = 1)
+    max_all = np.max(array_)
+
+    min_ax0 = np.min(array_, axis = 0)
+    min_ax1 = np.min(array_, axis = 1)
+    min_all = np.min(array_)
+
+    sum_ax0 = np.sum(array_, axis = 0)
+    sum_ax1 = np.sum(array_, axis = 1)
+    sum_all = np.sum(array_)
+
+    return {'mean': [mean_ax0.tolist(), mean_ax1.tolist(), float(mean_all)],
+            'variance': [var_ax0.tolist(), var_ax1.tolist(), float(var_all)],
+            'standard_deviation': [std_ax0.tolist(), std_ax1.tolist(), float(std_all)],
+            'max': [max_ax0.tolist(), max_ax1.tolist(), float(max_all)],
+            'min': [min_ax0.tolist(), min_ax1.tolist(), float(min_all)],
+            'sum': [sum_ax0.tolist(), sum_ax1.tolist(), float(sum_all)]}
+```
+
+    The input of the function should be a list containing 9 digits. The function should convert the list into a 3 x 3 Numpy array, and then return a dictionary containing the mean, variance, standard deviation, max, min, and sum along both axes and for the flattened matrix.
            
            
       
