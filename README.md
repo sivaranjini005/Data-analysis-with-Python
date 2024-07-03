@@ -29,6 +29,18 @@
          * There is a positive correlation between cholesterol and glucose level (0.4)
          * Cardio vascular disease positively correlatd with age(0.2), cholesteroal(0.2) and weight(0.2) and negatively correlated with height(-0.1)
          overall heat map highlights that weight, age, cholesterol and glucose levels are some of the significant factors associated with cardio-vascular disease.
+### 3.Sea Level Predictor:
+          Here we will analyze a dataset of the global average sea level change since 1880. we will use the data to predict the sea level change through year 2050.
+          File source:epa_sea_level.csv
+          ![Sea level plot](https://github.com/sivaranjini005/Data-analysis-with-Python/blob/master/sea%20level%20predictor/sea_level_plot.png)
+          * The plot indicates a consistent rise in sea levels over time.
+          * The slope of the red line (1880-2050) suggests a gradual increase in sea level over the entire period.
+          * The slope of the green line (2000-2050) is steeper, indicating that the rate of sea level rise has increased in recent years.
+          If the recent trend continues, the sea level rise by 2050 could be significantly higher than if the historical trend were to continue unchanged.
+### 4. Page View Time Series Visualiser:
+          
+          
+         
       
            
            
